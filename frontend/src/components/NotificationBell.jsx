@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Bell, Check, X } from 'lucide-react';
+import { API_URL } from '../firebase/config';
 import '../css/NotificationBell.css';
 
 export default function NotificationBell({ userEmail }) {
@@ -19,7 +20,7 @@ export default function NotificationBell({ userEmail }) {
   const fetchNotifications = async () => {
     try {
       console.log('Fetching notifications for:', userEmail);
-      const response = await fetch(`http://localhost:3001/api/notifications/${encodeURIComponent(userEmail)}`);
+      const response = await fetch(`${API_URL}/api/notifications/${encodeURIComponent(userEmail)}`);
       if (response.ok) {
         const data = await response.json();
         console.log('Received notifications:', data);
@@ -36,7 +37,7 @@ export default function NotificationBell({ userEmail }) {
     setLoading(true);
     try {
       console.log('Accepting notification:', notificationId);
-      const response = await fetch(`http://localhost:3001/api/notifications/${notificationId}/accept`, {
+      const response = await fetch(`${API_URL}/api/notifications/${notificationId}/accept`, {
         method: 'POST',
       });
       
@@ -60,7 +61,7 @@ export default function NotificationBell({ userEmail }) {
   const handleReject = async (notificationId) => {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:3001/api/notifications/${notificationId}/reject`, {
+      const response = await fetch(`${API_URL}/api/notifications/${notificationId}/reject`, {
         method: 'POST',
       });
       
