@@ -8,7 +8,7 @@ import { Awareness } from 'y-protocols/awareness';
 import { io } from 'socket.io-client';
 import { Menu, Cloud, CloudOff, Lock, MoreVertical, X, UserPlus, Copy, Check } from 'lucide-react';
 import { getCurrentUserToken } from '../firebase/auth';
-import { auth } from '../firebase/config';
+import { auth, API_URL } from '../firebase/config';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import 'quill/dist/quill.snow.css';
 import '../css/EditorPage.css';
@@ -84,7 +84,7 @@ export default function EditorPage() {
 
   const saveTitleToBackend = async (title) => {
     try {
-      const response = await fetch(`http://localhost:3001/api/documents/${id}/title`, {
+      const response = await fetch(`${API_URL}/api/documents/${id}/title`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -102,7 +102,7 @@ export default function EditorPage() {
 
   const fetchDocumentTitle = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/api/documents/${id}`);
+      const response = await fetch(`${API_URL}/api/documents/${id}`);
       if (response.ok) {
         const data = await response.json();
         if (data.title) {
@@ -133,7 +133,7 @@ export default function EditorPage() {
 
   const fetchCollaborators = async () => {
     try {
-      const response = await fetch(`http://localhost:3001/api/documents/${id}/collaborators`);
+      const response = await fetch(`${API_URL}/api/documents/${id}/collaborators`);
       if (response.ok) {
         const data = await response.json();
         setCollaborators(data.collaborators || []);
@@ -151,7 +151,7 @@ export default function EditorPage() {
 
     setShareLoading(true);
     try {
-      const response = await fetch(`http://localhost:3001/api/documents/${id}/share`, {
+      const response = await fetch(`${API_URL}/api/documents/${id}/share`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -185,7 +185,7 @@ export default function EditorPage() {
     }
 
     try {
-      const response = await fetch(`http://localhost:3001/api/documents/${id}/collaborators`, {
+      const response = await fetch(`${API_URL}/api/documents/${id}/collaborators`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -274,7 +274,7 @@ export default function EditorPage() {
       const binding = new QuillBinding(ytext, quill);
 
       // Initialize socket
-      const socket = io('http://localhost:3001', {
+      const socket = io(API_URL, {
         reconnection: true,
         reconnectionDelay: 1000,
         reconnectionAttempts: 5

@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
 import { useState, useEffect } from 'react';
 import { FileText, Menu, Search, Grid3x3, List, MoreVertical, Clock, Plus, Trash2, X } from 'lucide-react';
-import { auth } from '../firebase/config';
+import { auth, API_URL } from '../firebase/config';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import NotificationBell from '../components/NotificationBell';
 import '../css/LandingPage.css';
@@ -54,7 +54,7 @@ export default function LandingPage() {
     setLoadingDocs(true);
     try {
       console.log('Fetching documents for user:', userId);
-      const response = await fetch(`http://localhost:3001/api/documents/user/${userId}`);
+      const response = await fetch(`${API_URL}/api/documents/user/${userId}`);
       if (response.ok) {
         const docs = await response.json();
         console.log('Received documents:', docs);
@@ -133,7 +133,7 @@ export default function LandingPage() {
 
     setDeletingDoc(docId);
     try {
-      const response = await fetch(`http://localhost:3001/api/documents/${docId}`, {
+      const response = await fetch(`${API_URL}/api/documents/${docId}`, {
         method: 'DELETE',
       });
 
@@ -190,7 +190,7 @@ export default function LandingPage() {
     try {
       // Delete all selected documents
       const deletePromises = selectedDocs.map(docId =>
-        fetch(`http://localhost:3001/api/documents/${docId}`, {
+        fetch(`${API_URL}/api/documents/${docId}`, {
           method: 'DELETE',
         })
       );

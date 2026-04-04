@@ -1,0 +1,12 @@
+{
+  "FIREBASE_TYPE": "service_account",
+  "FIREBASE_PROJECT_ID": "draftly-abe2c",
+  "FIREBASE_PRIVATE_KEY_ID": "37a82814ee7ea5b6f8a50114fc9313a46af97726",
+  "FIREBASE_PRIVATE_KEY": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDsExQ3Jo5/0ckL\nWjljlItKpW3l0/UKRtrGw56gF0elIU2tDrQOWOi03Sf4IPkkxtF0ev27u95ml9hN\nEjomC+a3Uu7ddcgZwjAxLUM+iPnFC7jhZ+bskdUultTMHQclDwsCa2jaeQ/dBpBV\n66m35LF/Fj5cHVN5ymWDZLtOZrwFaVUBS4CAOfGAmS8aKNAHioVAiI1hdf0Ezz0N\nAKnEOAovKHJYmMRWn+nLV1IW70I/KxxMiolQd7UoWDmZ7ZgNWepgLRje8L+eBoL0\n9mk0QDJmtdmuO2CNlZ5xshS7V/BW8h+z3zUiKq8vAKDnYB8iUVVGoHoNErOjPk0x\nKWdEUoZDAgMBAAECggEAXDcXrnNhNoy7+7NCt6NOxdnZE+23ykvjKcFANUjis55O\nuUsFCpWwUPYSpto6eCMxrk5czviT539o/rIgBLyhYvsCU3+uqmEwcgU8PzFCX7Y0\ngdgUXFSa8Zf5h8HPCKrXohpS2wRvLediei2UHkE3FG2b7l+GPAzTmn++quF2kKXU\nYmzIAgAm2gI7aYv+ce/QuDC0HTBGR8kjhS2EvWpMOthG8C3WEPHtAv1IO0XEYBv2\n6xV0vD9TdTRxnxY5hi3KUCh3ixp34RS7t7ikxlXrzMA+z7skXfEKPicuVo7Q+bK5\n5uatD528F2j2hUq09WbAuvkYEZIN9kExya3+ZKJAAQKBgQD+cuV2jHEVUSPne+rJ\n77qzDXl86p765DWIKO41sf+Cr07wwktXHokcfKO2ON80pr1pkREofgReNDQ4VQoF\nEUpvzxEveKSTmBupwfMqHWjnoKzxyt1AvBeK98GXYUMVdCn1gES0SR2D+PuRqzmp\n4ny81N3P4hAhnWV9j25ZvJ5BCQKBgQDtg4HGSNKxCzUQx8Sp9CYxzKUFcf75PyqN\ntS6DpE95DEjZLrwVjSEP+nBL8R9qqBroa/2KPrrc1A/G1XNT+wb+bWa29sHm8pdc\nRlQ90cYmljv9fQc0DCiN4me5iNR1rkPPELe+YoshuDWPaZP0m7adOiRk8P0ilGpU\npJzkYkH76wKBgD/JM8bFLDAI2DRWdyRKSYZLUXJEKriAbv8EK7sgNQpgwixOuK5N\nRFf00uGCXkoHpqIJMMDy3ktzUMfyYYGltQBUa114I+GwFvc2XKvpFXxDZjdzAIYS\n4OAAffJh+nwtU7tsfUyoq5KC3yXEQ79XvKdlwXk0lZCnsWKJi0NJqm5pAoGARufk\nnTpuU9ZhsDHDP22Y3XMXrMl8chJudMGrMjeiViPZt6ShF9n7DdcZIULJu0CWT961\nYUka5gQU9aoRdPfS/a/RYzvFZVn03+JLEe2HN0vQevuRY/NhRAJcLuJvcvZkXfPC\ntv6aRKXGr5q4ReUanlOWO+BJ4cHnAH/oKrI+uqMCgYEA3Od7fIdXxFRec0IDhmbN\nhsAQoTDWdUntaUauPmPSzmcL8Mxqj91yxU3Zl26E+jG0ilD3RYEyLocfEJMooNmO\nKiwt/oxOYtts37PJQf8PYPFbRUGmPd5x4/Eh7hDG0p/Bmes7j2ij7tY9kWJvq86b\n2S1iPCHPOsI3Zp/ORlrP3rk=\n-----END PRIVATE KEY-----\n",
+  "FIREBASE_CLIENT_EMAIL": "firebase-adminsdk-fbsvc@draftly-abe2c.iam.gserviceaccount.com",
+  "FIREBASE_CLIENT_ID": "109998239809852615329",
+  "FIREBASE_AUTH_URI": "https://accounts.google.com/o/oauth2/auth",
+  "FIREBASE_TOKEN_URI": "https://oauth2.googleapis.com/token",
+  "FIREBASE_AUTH_PROVIDER_CERT_URL": "https://www.googleapis.com/oauth2/v1/certs",
+  "FIREBASE_CLIENT_CERT_URL": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40draftly-abe2c.iam.gserviceaccount.com"
+}
