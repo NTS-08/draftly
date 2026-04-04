@@ -98,7 +98,12 @@ const verifyToken = async (req, res, next) => {
 
 // REST API endpoints
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', message: 'Server is running' });
+  res.json({ 
+    status: 'ok', 
+    message: 'Server is running',
+    firebase: firebaseInitialized ? 'connected' : 'limited mode',
+    database: db ? 'available' : 'not available'
+  });
 });
 
 // Get user documents
@@ -337,15 +342,21 @@ app.get('/api/documents/:documentId/collaborators', async (req, res) => {
 
 // Share document with user (creates pending invitation)
 app.post('/api/documents/:documentId/share', async (req, res) => {
+  console.log('Share request received:', { documentId: req.params.documentId, body: req.body });
+  
   if (!firebaseInitialized || !db) {
-    return res.status(503).json({ error: 'Database not available' });
+    console.error('Share failed: Database not available');
+    return res.status(503).json({ error: 'Database not available. Please configure Firebase.' });
   }
   
   try {
     const { documentId } = req.params;
     const { email, documentTitle, sharedBy } = req.body;
     
+    console.log('Processing share:', { email, documentTitle, sharedBy });
+    
     if (!email) {
+      console.error('Share failed: Email is required');
       return res.status(400).json({ error: 'Email is required' });
     }
     
