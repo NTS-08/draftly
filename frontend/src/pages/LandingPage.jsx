@@ -522,6 +522,17 @@ export default function LandingPage() {
       <footer className="landing-footer">
         <p>© 2025 <a href="https://semozhix.in" target="_blank" rel="noopener noreferrer">semozhix</a>. All rights reserved.</p>
       </footer>
+
+      {/* Floating Add Document Button */}
+      {user && (
+        <button 
+          className="floating-add-button" 
+          onClick={handleCreateDocument}
+          title="Create new document"
+        >
+          <Plus style={{ width: '24px', height: '24px' }} />
+        </button>
+      )}
     </div>
   );
 }
