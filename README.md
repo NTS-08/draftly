@@ -89,14 +89,7 @@ npm run dev
 
 Visit `http://localhost:5173` in your browser.
 
-## 📚 Documentation
 
-- **[ENV_SETUP.md](ENV_SETUP.md)** - Environment variables configuration
-- **[DEPLOYMENT.md](DEPLOYMENT.md)** - Complete deployment guide
-- **[QUICK_DEPLOY.md](QUICK_DEPLOY.md)** - Fast deployment in 15 minutes
-- **[GITHUB_SETUP.md](GITHUB_SETUP.md)** - Push to GitHub guide
-- **[backend/FIREBASE_SETUP.md](backend/FIREBASE_SETUP.md)** - Firebase setup instructions
-- **[backend/GET_SERVICE_KEY.md](backend/GET_SERVICE_KEY.md)** - Get Firebase service account key
 
 ## 🚢 Deployment
 
@@ -106,7 +99,6 @@ Deploy your app in minutes:
 - Frontend: Netlify (Free)
 - Backend: Render (Free)
 
-See [QUICK_DEPLOY.md](QUICK_DEPLOY.md) for step-by-step instructions.
 
 ## 📖 Usage
 
@@ -199,6 +191,27 @@ For support, email support@semozhix.in or open an issue on GitHub.
 - [ ] Mobile app
 - [ ] Dark mode
 - [ ] Markdown support
+
+## 🤖 AI Tools Used
+
+This project was developed with assistance from the following AI tools:
+
+- **Kiro AI** - AI-powered IDE assistant for code generation, debugging, deployment configuration, and project scaffolding
+- **Claude (Anthropic)** - Used through Kiro AI for intelligent code suggestions and problem-solving
+
+### AI Assistance Disclosure
+
+AI tools were used throughout the development process for:
+- Code generation and refactoring
+- Bug fixing and debugging
+- Deployment configuration (Netlify, Render, Railway)
+- Documentation writing
+- UI/UX improvements
+- Environment setup and configuration
+- Firebase integration
+- Real-time collaboration implementation
+
+All AI-generated code was reviewed, tested, and modified as needed to ensure quality and functionality.
 
 ---
 
